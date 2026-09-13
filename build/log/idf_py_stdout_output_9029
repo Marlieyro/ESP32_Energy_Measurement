@@ -1,0 +1,7 @@
+Command: cmake -G Ninja -B /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment
+-- Component directory /home/user/esp/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - OFF
+-- git rev-parse returned 'збій: не є git сховищем (як і жодна з батьківських директорій до місця монтування /mnt)
+Зупинка на межі файлової системи (GIT_DISCOVERY_ACROSS_FILESYSTEM не встановлено).'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
