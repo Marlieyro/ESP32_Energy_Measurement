@@ -26,6 +26,7 @@ static SemaphoreHandle_t uart_log_semaphore = NULL;
 
 void uart_conf_init(void) {
     uart_config_t uart_config = {0};
+
     uart_config.baud_rate = UART_BAUD_RTT;
     uart_config.parity = UART_PARITY_DISABLE;
     uart_config.stop_bits = UART_STOP_BITS_1;

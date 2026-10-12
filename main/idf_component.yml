@@ -1,3 +1,7 @@
 dependencies:
   espressif/esp-modbus:
     version: "^2.1.0"
+  espressif/esp_wifi_remote:
+    version: ">=0.10,<2.0"
+    rules:
+      - if: "target in [esp32p4, esp32h2]"

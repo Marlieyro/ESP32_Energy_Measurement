@@ -1,1 +1,0 @@
-Command: cmake -G Ninja -B /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment
