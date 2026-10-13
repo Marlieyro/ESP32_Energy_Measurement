@@ -3,6 +3,7 @@
 #include "uart_conf.h"
 #include "modbus_conf.h"
 #include "wifi_conf.h"
+#include "app_http_client.h"
 
 // ----------------- ESPIDF includes ---------------
 #include <stdio.h>
@@ -11,14 +12,19 @@
 
 // ----------------- DEFINES -----------------------
 #define MODBUS_TASK_STACK_DEPTH_BYTES (3072)
-// Range 0-25 where 0 is lowest
-#define MODBUS_TASK_PRIORITY (12)
+#define MODBUS_TASK_PRIORITY (12) // Range 0-25 where 0 is lowest
 
 // Це звичайна таска не idle
 void app_main(void){
-
     // 1. WiFi Initialization
     wifi_init_general();
+
+    // 2. HTTP Client Init
+    app_http_client_init();
+
+    // 3. Start Test HTTP POST request
+    xTaskCreate(vTask_HTTP_POST_request, "test_http_post_request", MODBUS_TASK_STACK_DEPTH_BYTES,  (void*) 1, 5, NULL);
+
 
     // Setup UART
 //    uart_conf_init();

@@ -2,6 +2,7 @@
 // Created by user on 12.10.26.
 //
 
+// --------------- Includes -----------------
 #include <string.h>
 #include <sys/param.h>
 #include <stdlib.h>
@@ -16,15 +17,17 @@
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
 #include "esp_crt_bundle.h"
 #endif
-
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_http_client.h"
 
-#define HTTP_HOST_IP_ADDR "ABOBA"
-#define HTTP_HOST_PORT (80)
-#define HOST_ENDPOINT_PATH "/gondon"
+#include "app_http_client.h"
+
+// -------------- Defines -----------------
+#define HTTP_HOST_IP_ADDR "192.168.0.222"
+#define HTTP_HOST_PORT (45000)
+#define HOST_ENDPOINT_PATH "/energy"
 #define HTTP_TIMEOUT_MS (5000) // 5000ms = 5sec
 #define HTTP_MAX_AUTHORIZATION_RETRIES (5)
 #define HTTP_RX_BUFFER_SIZE (1024) // Bytes
@@ -33,6 +36,8 @@
 #define HTTP_MAX_OUTPUT_BUFFER (1024)
 
 #define TAG "app_http_client"
+
+static char http_response_from_server_buffer[HTTP_MAX_OUTPUT_BUFFER + 1] = {0};
 
 static esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 {
@@ -132,9 +137,8 @@ static esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 }
 
 static esp_http_client_handle_t http_client_handle;
-char local_response_buffer[HTTP_MAX_OUTPUT_BUFFER + 1] = {0};
 
-void app_http_client_init(void) {
+    void app_http_client_init() {
     esp_http_client_config_t http_client_config = {0};
     http_client_config.host = HTTP_HOST_IP_ADDR;
     http_client_config.port = HTTP_HOST_PORT;
@@ -149,7 +153,7 @@ void app_http_client_init(void) {
     http_client_config.buffer_size_tx = HTTP_TX_BUFFER_SIZE;
     http_client_config.keep_alive_enable = KEEP_ALIVE_ENABLE;
     http_client_config.addr_type = HTTP_ADDR_TYPE_INET; // IPv4
-    http_client_config.user_data = local_response_buffer; // HTTP Response Data
+    http_client_config.user_data = http_response_from_server_buffer; // HTTP Response Data
 
     http_client_handle = esp_http_client_init(&http_client_config);
 }
@@ -178,4 +182,14 @@ void app_http_client_post() {
 
 void app_http_client_deinit(void){
     esp_http_client_cleanup(http_client_handle);
+}
+
+void vTask_HTTP_POST_request(void *arg) {
+
+    for (;;) {
+        // Test, after Blokcing Que
+        app_http_client_post();
+        vTaskDelay(5000);
+    }
+    vTaskDelete(NULL);
 }

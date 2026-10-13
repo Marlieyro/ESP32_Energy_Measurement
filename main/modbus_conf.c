@@ -124,12 +124,12 @@ static void conf_mapping() {
     // param_opts - optional
     // TODO warning section can be mistakes
     // Test parametr
-    device_parameters[0] = {
+    /*device_parameters[0] = {
         CID_TEST_COMUN, STR("Test"), STR("--"), MODBUS_SLAVE_1, MB_PARAM_DISCRETE,
         modbus_test_register, 1, 0, PARAM_TYPE_U8, PARAM_SIZE_U8, 0, PAR_PERMS_READ
-    };
+    };*/
 
-    device_parameters[1];
+    // device_parameters[1];
 
     // Визначаємо к-сть параметрів
     uint16_t num_device_parameters = (sizeof(device_parameters) / sizeof(device_parameters[0]));

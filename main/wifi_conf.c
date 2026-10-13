@@ -17,7 +17,7 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-#define EXAMPLE_ESP_WIFI_SSID      "LinkaStar193"
+#define EXAMPLE_ESP_WIFI_SSID      "LinkaStar1913"
 #define EXAMPLE_ESP_WIFI_PASS      "irestartit2"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
 
@@ -33,7 +33,6 @@ static EventGroupHandle_t s_wifi_event_group;
 static const char *TAG = "wifi station";
 
 static int s_retry_num = 0;
-
 
 static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data)
 {
@@ -85,15 +84,15 @@ void wifi_init_sta(void)
         .sta = {
             .ssid = EXAMPLE_ESP_WIFI_SSID,
             .password = EXAMPLE_ESP_WIFI_PASS,
-            /* Authmode threshold resets to WPA2 as default if auth mode threshold equals WIFI_AUTH_OPEN
+            /*/* Authmode threshold resets to WPA2 as default if auth mode threshold equals WIFI_AUTH_OPEN
              * and password matches WPA2 standards (password len => 8).
              * If you want to connect the device to deprecated WEP/WPA networks, Please set the threshold value
              * to WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK and set the password with length and format matching to
              * WIFI_AUTH_WEP/WIFI_AUTH_WPA_PSK standards.
-             */
+             #1#
             .threshold.authmode = ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD,
             .sae_pwe_h2e = ESP_WIFI_SAE_MODE,
-            .sae_h2e_identifier = EXAMPLE_H2E_IDENTIFIER,
+            .sae_h2e_identifier = EXAMPLE_H2E_IDENTIFIER,*/
 #ifdef CONFIG_ESP_WIFI_WPA3_COMPATIBLE_SUPPORT
             .disable_wpa3_compatible_mode = 0,
 #endif
@@ -128,7 +127,7 @@ void wifi_init_sta(void)
 
 void wifi_init_general(void)
 {
-    //Initialize NVS
+    // Initialize NVS
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
       ESP_ERROR_CHECK(nvs_flash_erase());
