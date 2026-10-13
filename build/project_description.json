@@ -1780,8 +1780,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp-modbus" ],
             "file": "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build/esp-idf/main/libmain.a",
-            "sources": [ "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/main.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/wifi_conf.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/app_http_client.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/modbus_conf.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/uart_conf.c" ],
-            "include_dirs": [ "." ]
+            "sources": [ "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/main.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/wifi_conf.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/app_http_client.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/modbus_conf.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/uart_conf.c", "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/appStreamBuffer/app_streambuffers.c" ],
+            "include_dirs": [ ".", "appStreamBuffer" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -3918,7 +3918,7 @@
             "priv_reqs": [ "espressif__esp-modbus" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__esp-modbus" ],
-            "include_dirs": [ "." ]
+            "include_dirs": [ ".", "appStreamBuffer" ]
         },
         "espressif__esp-modbus": {
             "alias": "idf::espressif__esp-modbus",

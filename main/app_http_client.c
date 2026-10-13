@@ -158,10 +158,7 @@ static esp_http_client_handle_t http_client_handle;
     http_client_handle = esp_http_client_init(&http_client_config);
 }
 
-void app_http_client_post() {
-    // Data to post
-    const char *post_data = "{\"field1\":\"value1\"}";
-
+void app_http_client_post(char* post_data) {
     // Change HTTP header type to JSON
     esp_http_client_set_header(http_client_handle, "Content-Type", "application/json");
 
@@ -185,11 +182,12 @@ void app_http_client_deinit(void){
 }
 
 void vTask_HTTP_POST_request(void *arg) {
-
+        char *post_data = "{\"field1\":\"value1\"}";
     for (;;) {
         // Test, after Blokcing Que
-        app_http_client_post();
+        app_http_client_post(post_data);
         vTaskDelay(5000);
     }
     vTaskDelete(NULL);
 }
+

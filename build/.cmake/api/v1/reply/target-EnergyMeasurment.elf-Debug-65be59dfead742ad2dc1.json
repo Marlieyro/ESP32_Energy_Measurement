@@ -2972,6 +2972,10 @@
 				{
 					"backtrace" : 116,
 					"path" : "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main"
+				},
+				{
+					"backtrace" : 116,
+					"path" : "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/appStreamBuffer"
 				}
 			],
 			"language" : "C",
