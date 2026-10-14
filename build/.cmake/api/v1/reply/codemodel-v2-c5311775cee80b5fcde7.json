@@ -4717,7 +4717,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "EnergyMeasurment.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-EnergyMeasurment.elf-Debug-65be59dfead742ad2dc1.json",
+					"jsonFile" : "target-EnergyMeasurment.elf-Debug-922b2b55e17a5130a143.json",
 					"name" : "EnergyMeasurment.elf",
 					"projectIndex" : 0
 				},
@@ -5333,7 +5333,7 @@
 				{
 					"directoryIndex" : 160,
 					"id" : "__idf_main::@7368607ed66887415643",
-					"jsonFile" : "target-__idf_main-Debug-b4d90c59458a300b3b50.json",
+					"jsonFile" : "target-__idf_main-Debug-22cf86f0e90fe16164ac.json",
 					"name" : "__idf_main",
 					"projectIndex" : 1
 				},

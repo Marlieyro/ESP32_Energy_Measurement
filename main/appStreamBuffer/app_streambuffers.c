@@ -1,28 +1,34 @@
 //
 // Created by user on 13.10.26.
 //
+#include "esp_log.h"
 #include "freertos/FreeRTOS.h"
-#include "freertos/stream_buffer.h"
+#include "freertos/message_buffer.h"
 #include "app_streambuffers.h"
 
+static const char *TAG = "MSG_BUFFER";
+
 #define BUFFER_SIZE 1400 // Bytes, 1400 cause HTTP payload
-#define BUFFER_TRIGGER_LEVEL 1300 // Bytes
+// #define BUFFER_TRIGGER_LEVEL 1300 // Bytes
 
-static StreamBufferHandle_t xStreamBuffer = NULL;
+static MessageBufferHandle_t xMsgBuffer = NULL;
 
-void app_streamBuffer_create() {
-    xStreamBuffer = xStreamBufferCreate(BUFFER_SIZE, BUFFER_TRIGGER_LEVEL);
-    if( xStreamBuffer == NULL ) {
-        // LOG Error //TODO
+void app_MsgBuffer_create() {
+    xMsgBuffer = xMessageBufferCreate(BUFFER_SIZE);
+    if( xMsgBuffer == NULL ) {
+        ESP_LOGI(TAG, "xMessageBufferCreate failed");
     } else {
-        // LOG Success TODO
+        ESP_LOGI(TAG, "xMessageBufferCreate succeeded");
     }
 }
 
-StreamBufferHandle_t getAppStreamBuffer() {
-    return xStreamBuffer;
+MessageBufferHandle_t getAppMsgBuffer() {
+    return xMsgBuffer;
 }
 
-void app_streamBuffer_destroy() {
-    xStreamBuffer = NULL;
+void app_streamMsg_destroy() {
+    vMessageBufferDelete(xMsgBuffer);
+    xMsgBuffer = NULL;
+    ESP_LOGI(TAG, "xMsgBufferDelete succeeded");
 }
+

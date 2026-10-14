@@ -2,23 +2,30 @@
 // Created by user on 03.09.26.
 //
 
-#include "esp_modbus_common.h"
-#include "esp_modbus_master.h"
-#include "modbus_conf.h"
-
+// --------------- SYSTEM INCLUDES -----------------
 #include "FreeRTOSConfig.h"
+#include "freertos/FreeRTOS.h"
 #include "portmacro.h"
-#include "uart_conf.h"
+#include "../uart_conf.h"
 #include "../../../../../../home/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/projdefs.h"
 #include "freertos/projdefs.h"
 #include "freertos/task.h"
 #include "hal/emac_hal.h"
+#include "../appStreamBuffer/app_streambuffers.h"
+#include "freertos/message_buffer.h"
 
-// CONFIG_FMB_COMM_MODE_RTU_EN
+// -------------- USER INCLUDES ------------------
+#include "esp_modbus_common.h"
+#include "esp_modbus_master.h"
+#include "modbus_conf.h"
 
+// -------------- DEFINES -----------------
 #define MODBUS_BAUD_RTT (115200)
 // Modbus slave device adr
 #define MODBUS_SLAVE_1 (0) // TODO
+
+// ------------- ESPIDF LOG TAG -------------
+static const char *TAG = "MODBUS";
 
 constexpr uart_port_t modbus_uart_port_numbr = UART_NUM_2;
 static void *master_handler = NULL;
@@ -37,16 +44,15 @@ enum modbus_register_adr_map {
 };
 
 /* ------------------- Modbus action management Queue ---------------------- */
-
-// The que for action choosing write or read
-static QueueHandle_t modbus_communication_command;
-
 // Modbus available actions
 typedef enum {
     modbus_action_write = 0,
     modbus_action_read = 1,
     modbus_default_action_read = 2,
 } modbus_command_actions;
+
+// The que for action choosing write or read
+static QueueHandle_t modbus_communication_command;
 
 // Struct for action choosing
 typedef struct {
@@ -56,25 +62,6 @@ typedef struct {
     uint16_t value_to_write;
 } Modbus_action_rw;
 
-/* ----------------------------------------------------- */
-
-/* --------------------- Modbus received data management ---------------------- */
-
-/*
- * Already created buffer
- * Getter function available
- */
-static QueueHandle_t modbus_received_data_buff;
-
-/*
- * Struct that contains data
- * can be extended
- */
-typedef struct {
-    uint16_t received_data_val;
-} Modbus_data;
-
-/* ----------------------------------------------------- */
 
 /* Memory address resolution is 16 bit or 2 bytes
  * If some value are consume more than 16 bit we need point
@@ -112,10 +99,8 @@ void modbus_conf_init() {
     conf_mapping();
 
     ESP_ERROR_CHECK(mbc_master_start(master_handler));
-
-    modbus_received_data_buff = xQueueCreate(10, sizeof(Modbus_data));
-
     modbus_communication_command = xQueueCreate(4, sizeof(Modbus_action_rw));
+    ESP_LOGI(TAG, "Modbus Config success");
 }
 
 static void conf_mapping() {
@@ -145,12 +130,14 @@ void vTask_Modbus_Start_Communication(void* arg) {
     uint16_t received_value = 0;
 
     // Struct that stores the data from SLAVE device
-    Modbus_data data_struct = {0};
+    telemetry_data_t data_struct = {0};
 
     // Errors handling
     uint32_t queue_error_counter = 0;
     uint32_t modbus_communication_error_counter = 0;
     esp_err_t modbus_communication_error = ESP_OK;
+
+    const TickType_t xBlockTime = pdTICKS_TO_MS(20);
 
     for (;;) {
         /*
@@ -165,22 +152,21 @@ void vTask_Modbus_Start_Communication(void* arg) {
                     modbus_communication_error = mbc_master_set_parameter(master_handler, modbus_action.cid, (uint8_t*)&modbus_action.value_to_write, &type);
                     if (modbus_communication_error != ESP_OK) {
                         modbus_communication_error_counter++;
-                        uart_log("modbus_communication_error");
+                        ESP_LOGI(TAG, "modbus_action_write - Communication Error");
                     }
                     break;
                 case modbus_action_read:
                     modbus_communication_error = mbc_master_get_parameter(master_handler, modbus_action.cid, (uint8_t*)&received_value, &type);
                     if (modbus_communication_error == ESP_OK) {
-                        data_struct.received_data_val = received_value;
-                        // TODO pdMS_TO_TICKS(10) change interval
-                        if (xQueueSend(modbus_received_data_buff, (void*)&data_struct, pdMS_TO_TICKS(10)) != pdTRUE) {
+                        data_struct.data = received_value;
+                        data_struct.id = 1; // TODO
+                        data_struct.time = 16561743; // TODO
+                        if (xMessageBufferSend(getAppMsgBuffer(), &data_struct, sizeof(telemetry_data_t), xBlockTime) != 0) {
                             queue_error_counter++;
-                            uart_log("");
+                            ESP_LOGI(TAG, "modbus_action_read - Queue Error");
                         }
                     } else {
                         modbus_communication_error_counter++;
-                        // TODO
-                        uart_log("modbus_communication_error");
                     }
                     break;
                 default:
@@ -189,32 +175,27 @@ void vTask_Modbus_Start_Communication(void* arg) {
         } else {
             modbus_communication_error = mbc_master_get_parameter(master_handler, CID_VOLTAGE, (uint8_t*)&received_value, &type);
             if (modbus_communication_error == ESP_OK) {
-                data_struct.received_data_val = received_value;
-                // TODO pdMS_TO_TICKS(10) change interval
-                if (xQueueSend(modbus_received_data_buff, (void*)&data_struct, pdMS_TO_TICKS(10)) != pdTRUE) {
+                data_struct.data = received_value;
+                data_struct.id = 1; // TODO
+                data_struct.time = 16561743; // TODO
+                if (xMessageBufferSend(getAppMsgBuffer(), &data_struct, sizeof(telemetry_data_t), xBlockTime) != 0) {
                     queue_error_counter++;
-                    uart_log("");
+                    ESP_LOGI(TAG, "modbus_default_action - Queue Error");
                 }
             } else {
                 modbus_communication_error_counter++;
-                // TODO
-                uart_log("modbus_communication_error");
             }
         }
 
         // Check the task Stack usage
         UBaseType_t uxHighWaterMark = uxTaskGetStackHighWaterMark(NULL);
-        uart_log("uxHighWaterMark"); // TODO
+        ESP_LOGI(TAG, "uxTaskGetStackHighWaterMark: %d", uxHighWaterMark);
     }
     vTaskDelete(NULL);
 }
 
 void modbus_destroy() {
     ESP_ERROR_CHECK(mbc_master_delete(master_handler));
-}
-
-QueueHandle_t modbusGetReceivedDataBuffer() {
-    return modbus_received_data_buff;
 }
 
 QueueHandle_t modbusGetCommunicationCommandBuffer() {

@@ -1,14 +1,17 @@
 idf_component_register(
             SRCS
         "main.c"
-        "wifi_conf.c"
-        "app_http_client.c"
-        "modbus_conf.c"
+        "appWiFiConfig/wifi_conf.c"
+        "appHTTPClient/app_http_client.c"
+        "appModBusConfig/modbus_conf.c"
         "uart_conf.c"
         "appStreamBuffer/app_streambuffers.c"
             INCLUDE_DIRS
         "."
         "appStreamBuffer"
+        "appWiFiConfig"
+        "appModBusConfig"
+        "appHTTPClient"
         #SRC_DIRS "." "Src"
             REQUIRES
         esp_driver_i2c

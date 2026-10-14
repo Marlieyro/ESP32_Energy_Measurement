@@ -2,7 +2,7 @@
 // Created by user on 12.10.26.
 //
 
-// --------------- Includes -----------------
+// --------------- SYSTEM INCLUDES -----------------
 #include <string.h>
 #include <sys/param.h>
 #include <stdlib.h>
@@ -11,8 +11,6 @@
 #include "nvs_flash.h"
 #include "esp_event.h"
 #include "esp_netif.h"
-// #include "protocol_examples_common.h"
-// #include "protocol_examples_utils.h"
 #include "esp_tls.h"
 #if CONFIG_MBEDTLS_CERTIFICATE_BUNDLE
 #include "esp_crt_bundle.h"
@@ -21,10 +19,13 @@
 #include "freertos/task.h"
 #include "esp_system.h"
 #include "esp_http_client.h"
+#include "freertos/message_buffer.h"
 
+// -------------- USER INCLUDES ------------------
 #include "app_http_client.h"
+#include "../appStreamBuffer/app_streambuffers.h"
 
-// -------------- Defines -----------------
+// -------------- DEFINES -----------------
 #define HTTP_HOST_IP_ADDR "192.168.0.222"
 #define HTTP_HOST_PORT (45000)
 #define HOST_ENDPOINT_PATH "/energy"
@@ -35,9 +36,11 @@
 #define KEEP_ALIVE_ENABLE (true)
 #define HTTP_MAX_OUTPUT_BUFFER (1024)
 
-#define TAG "app_http_client"
+// ------------- ESPIDF LOG TAG -------------
+static const char *TAG = "HTTP_CLIENT";
 
 static char http_response_from_server_buffer[HTTP_MAX_OUTPUT_BUFFER + 1] = {0};
+static esp_http_client_handle_t http_client_handle;
 
 static esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 {
@@ -136,9 +139,7 @@ static esp_err_t _http_event_handler(esp_http_client_event_t *evt)
     return ESP_OK;
 }
 
-static esp_http_client_handle_t http_client_handle;
-
-    void app_http_client_init() {
+void app_http_client_init() {
     esp_http_client_config_t http_client_config = {0};
     http_client_config.host = HTTP_HOST_IP_ADDR;
     http_client_config.port = HTTP_HOST_PORT;
@@ -158,7 +159,8 @@ static esp_http_client_handle_t http_client_handle;
     http_client_handle = esp_http_client_init(&http_client_config);
 }
 
-void app_http_client_post(char* post_data) {
+void app_http_client_post(const char* post_data) {
+
     // Change HTTP header type to JSON
     esp_http_client_set_header(http_client_handle, "Content-Type", "application/json");
 
@@ -177,17 +179,65 @@ void app_http_client_post(char* post_data) {
     }
 }
 
-void app_http_client_deinit(void){
-    esp_http_client_cleanup(http_client_handle);
-}
-
 void vTask_HTTP_POST_request(void *arg) {
-        char *post_data = "{\"field1\":\"value1\"}";
+
+    // Data buffer to send into the Network
+    char post_data[1500] = {0};
+    int postData_Offset = 0;
+
+    // Data struct from Modbus
+    telemetry_data_t temp_telemetry_data = {0};
+
+    // Delay management
+    const TickType_t xBlockTime = portMAX_DELAY;
+
     for (;;) {
-        // Test, after Blokcing Que
-        app_http_client_post(post_data);
-        vTaskDelay(5000);
+        // Receiving a data from the Modbus Task
+        size_t xReceivedBytes = xMessageBufferReceive(getAppMsgBuffer(), &temp_telemetry_data, sizeof(telemetry_data_t),xBlockTime);
+
+        // Check
+        if (xReceivedBytes == 0) {
+            ESP_LOGI(TAG, "Received %d bytes of data. ERROR", xReceivedBytes);
+        }
+
+        // Convert received struct to the JSON format
+        int written_len = telemetry_to_json_iso_time(&temp_telemetry_data, post_data + postData_Offset, sizeof(post_data) - postData_Offset);
+
+        // Add offset to next buffer cell
+        postData_Offset += written_len;
+
+        // Send the data to Network
+        if (postData_Offset > 1200) {
+            app_http_client_post(post_data);
+            postData_Offset = 0;
+            written_len = 0;
+        } else continue;
     }
     vTaskDelete(NULL);
 }
 
+int telemetry_to_json_iso_time(const telemetry_data_t *data, char *buffer, size_t buffer_size) {
+    if (data == NULL || buffer == NULL || buffer_size == 0) {
+        return -1;
+    }
+
+    char time_str[32];
+    time_t raw_time = (time_t)data->time;
+    struct tm *tm_info = gmtime(&raw_time); // Конвертація у UTC
+
+    // Якщо конвертація пройшла успішно, формуємо рядок, інакше ставимо null
+    if (tm_info != NULL) {
+        strftime(time_str, sizeof(time_str), "%Y-%m-%dT%H:%M:%SZ", tm_info);
+    } else {
+        snprintf(time_str, sizeof(time_str), "null");
+    }
+
+    // Записуємо готовий JSON (зверніть увагу на лапки навколо %s для часу)
+    return snprintf(buffer, buffer_size,
+                    "{\"id\": %d, \"time\": \"%s\", \"data\": %d}",
+                    data->id, time_str, data->data);
+}
+
+void app_http_client_deinit(void){
+    esp_http_client_cleanup(http_client_handle);
+}

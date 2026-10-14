@@ -2976,6 +2976,18 @@
 				{
 					"backtrace" : 116,
 					"path" : "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/appStreamBuffer"
+				},
+				{
+					"backtrace" : 116,
+					"path" : "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/appWiFiConfig"
+				},
+				{
+					"backtrace" : 116,
+					"path" : "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/appModBusConfig"
+				},
+				{
+					"backtrace" : 116,
+					"path" : "/mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/main/appHTTPClient"
 				}
 			],
 			"language" : "C",

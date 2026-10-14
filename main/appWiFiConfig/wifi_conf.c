@@ -1,22 +1,21 @@
 //
 // Created by user on 11.09.26.
 //
-
+//
+// --------------- SYSTEM INCLUDES -----------------
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/event_groups.h"
 #include "esp_system.h"
-
 #include "esp_wifi.h"
-
 #include "esp_event.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
-
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
+// -------------- DEFINES -----------------
 #define EXAMPLE_ESP_WIFI_SSID      "LinkaStar1913"
 #define EXAMPLE_ESP_WIFI_PASS      "irestartit2"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  5
@@ -141,6 +140,7 @@ void wifi_init_general(void)
         esp_log_level_set("wifi", CONFIG_LOG_MAXIMUM_LEVEL);
     }
 
+    // Init STA Mode
     ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
     wifi_init_sta();
 }
