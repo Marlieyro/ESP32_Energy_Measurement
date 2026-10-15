@@ -1,0 +1,20 @@
+Command: /home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python -m esptool -p /dev/ttyUSB0 -b 460800 --before default-reset --after hard-reset --chip esp32 erase-flash
+esptool v5.3.1
+Serial port /dev/ttyUSB0:
+Connecting....
+[1A[2K[1A[2KConnected to ESP32 on /dev/ttyUSB0:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                68:25:dd:32:01:b4
+
+Uploading stub flasher...
+Running stub flasher...
+[1A[2K[1A[2KStub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Erasing flash memory (this may take a while)...
+[1A[2KFlash memory erased successfully in 1.4 seconds.
+
+Hard resetting via RTS pin...

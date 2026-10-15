@@ -1,0 +1,1389 @@
+Command: /home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python /home/user/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build/EnergyMeasurment.elf /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python' '/home/user/esp/esp-idf/tools/idf.py' '-B'
+rx mgmt buffer num: 5
+[0;32mI (607) wifi:Init management short buffer num: 32[0m
+[0;32mI (617) wifi:Init dynamic tx buffer n�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 12 2026 22:29:39[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=239d0h (145872) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=000339f8 vaddr=3ffb0000 size=04594h ( 17812) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00037f94 vaddr=40080000 size=08084h ( 32900) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=acabch (707260) map[0m
+[0;32mI (411) esp_image: segment 4: paddr=000ecae4 vaddr=40088084 size=0e6a8h ( 59048) load[0m
+[0;32mI (436) esp_image: segment 5: paddr=000fb194 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (447) boot: Disabling RNG early entropy source...[0m
+[0;32mI (458) cpu_start: Multicore app[0m
+[0;32mI (466) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (466) cpu_start: Pro cpu start user code[0m
+[0;32mI (466) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     EnergyMeasurment[0m
+[0;32mI (477) app_init: App version:      89[0m
+[0;32mI (480) app_init: Compile time:     Oct 15 2026 12:37:24[0m
+[0;32mI (485) app_init: ELF file SHA256:  53a606e6e...[0m
+[0;32mI (490) app_init: ESP-IDF:          v6.0.2[0m
+[0;32mI (493) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (497) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (516) heap_init: At 3FFB94C8 len 00026B38 (154 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 4009672C len 000098D4 (38 KiB): IRAM[0m
+[0;32mI (539) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;32mI (547) main_task: Started on CPU0[0m
+[0;32mI (547) main_task: Calling app_main()[0m
+[0;32mI (577) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (587) wifi:wifi driver task: 3ffc0e2c, prio:23, stack:6656, core=0[0m
+[0;32mI (597) wifi:wifi firmware version: 00ad238[0m
+[0;32mI (597) wifi:wifi certification version: v7.0[0m
+[0;32mI (597) wifi:config NVS flash: enabled[0m
+[0;32mI (597) wifi:config nano formatting: disabled[0m
+[0;32mI (597) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (607) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (607) wifi:Init management short buffer num: 32[0m
+[0;32mI (617) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (617) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (627) wifi:Init static rx buffer num: 10[0m
+[0;32mI (627) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (637) wifi_init: rx ba win: 6[0m
+[0;32mI (637) wifi_init: accept mbox: 6[0m
+[0;32mI (637) wifi_init: tcpip mbox: 32[0m
+[0;32mI (637) wifi_init: udp mbox: 6[0m
+[0;32mI (647) wifi_init: tcp mbox: 6[0m
+[0;32mI (647) wifi_init: tcp tx win: 5760[0m
+[0;32mI (647) wifi_init: tcp rx win: 5760[0m
+[0;32mI (647) wifi_init: tcp mss: 1440[0m
+[0;32mI (657) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (657) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (667) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (667) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (757) wifi:mode : sta (68:25:dd:32:01:b4)[0m
+[0;32mI (757) wifi:enable tsf[0m
+[0;32mI (767) wifi station: wifi_init_sta finished.[0m
+[0;32mI (777) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (777) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (797) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (807) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (837) wifi:<ba-add>idx:0 (ifx:0, 9c:53:22:7f:19:13), tid:5, ssn:0, winSize:64[0m
+[0;32mI (927) wifi:connected with LinkaStar1913, aid = 7, channel 6, BW20, bssid = 9c:53:22:7f:19:13[0m
+[0;32mI (927) wifi:security: WPA2-PSK, phy: bgn, rssi: -49, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (937) wifi:pm start, type: 1[0m
+
+[0;32mI (937) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (947) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1977) esp_netif_handlers: sta ip: 192.168.0.161, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (1977) wifi station: got ip:[0m
+[0;32mI (1977) wifi station: connected to ap SSID:LinkaStar1913 password:irestartit2[0m
+[0;32mI (1977) uart: queue free spaces: 20[0m
+[0;32mI (1987) mb_port.serial: mbm_rtu@0x3ffc7e84, suspend port from task.[0m
+[0;32mI (1987) MODBUS: Modbus Config success[0m
+[0;32mI (1997) MSG_BUFFER: xMessageBufferCreate succeeded[0m
+[0;32mI (1997) main_task: Returned from app_main()[0m
+[1;31mE (2047) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2047) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2047) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2057) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2117) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2117) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2117) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2127) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2187) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2187) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2187) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2197) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2257) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2257) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2257) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2267) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2327) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2327) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2327) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2337) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2397) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2397) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2397) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2407) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2467) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2467) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2467) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2477) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2537) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2537) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2537) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2547) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2607) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2607) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2607) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2617) MODBUS: uxTaskGetStackHighWaterMark: 1880[0m
+[1;31mE (2677) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2677) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2677) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2687) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (2747) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2747) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2747) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2757) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (2817) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2817) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2817) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2827) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (2887) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2887) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2887) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2897) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (2957) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (2957) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (2957) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (2967) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3027) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3027) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3027) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3037) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3097) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3097) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3097) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3107) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3167) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3167) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3167) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3177) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3237) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3237) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3237) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3247) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3307) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3307) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3307) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3317) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3377) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3377) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3377) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3387) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3447) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3447) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3447) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3457) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3517) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3517) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3517) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3527) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3587) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3587) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3587) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3597) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3657) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3657) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3657) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3667) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3727) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3727) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3727) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3737) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3797) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3797) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3797) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3807) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3867) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3867) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3867) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3877) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (3937) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (3937) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (3937) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (3947) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4007) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4007) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4007) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4017) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4077) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4077) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4077) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4087) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4147) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4147) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4147) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4157) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4217) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4217) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4217) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4227) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4287) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4287) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4287) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4297) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4357) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4357) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4357) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4367) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4427) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4427) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4427) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4437) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4497) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4497) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4497) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4507) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4567) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4567) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4567) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4577) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4637) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4637) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4637) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4647) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4707) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4707) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4707) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4717) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4777) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4777) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4777) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4787) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4847) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4847) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4847) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4857) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4917) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4917) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4917) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4927) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (4987) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (4987) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (4987) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (4997) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5057) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5057) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5057) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5067) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5127) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5127) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5127) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5137) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5197) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5197) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5197) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5207) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5267) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5267) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5267) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5277) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5337) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5337) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5337) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5347) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5407) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5407) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5407) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5417) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5477) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5477) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5477) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5487) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5547) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5547) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5547) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5557) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5617) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5617) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5617) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5627) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5687) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5687) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5687) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5697) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5757) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5757) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5757) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5767) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5827) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5827) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5827) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5837) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5897) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5897) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5897) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5907) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (5967) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (5967) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (5967) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (5977) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6037) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6037) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6037) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6047) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6107) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6107) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6107) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6117) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6177) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6177) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6177) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6187) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6247) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6247) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6247) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6257) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6317) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6317) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6317) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6327) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6387) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6387) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6387) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6397) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6457) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6457) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6457) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6467) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6527) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6527) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6527) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6537) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6597) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6597) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6597) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6607) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6667) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6667) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6667) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6677) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6737) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6737) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6737) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6747) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6807) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6807) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6807) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6817) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6877) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6877) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6877) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6887) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (6947) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (6947) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (6947) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (6957) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7017) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7017) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7017) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7027) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7087) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7087) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7087) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7097) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7157) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7157) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7157) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7167) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7227) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7227) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7227) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7237) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7297) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7297) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7297) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7307) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7367) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7367) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7367) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7377) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7437) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7437) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7437) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7447) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7507) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7507) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7507) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7517) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7577) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7577) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7577) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7587) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7647) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7647) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7647) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7657) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7717) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7717) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7717) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7727) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7787) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7787) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7787) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7797) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7857) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7857) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7857) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7867) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7927) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7927) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7927) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (7937) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (7997) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (7997) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (7997) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8007) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8067) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8067) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8067) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8077) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8137) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8137) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8137) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8147) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8207) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8207) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8207) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8217) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8277) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8277) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8277) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8287) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8347) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8347) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8347) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8357) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8417) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8417) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8417) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8427) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8487) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8487) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8487) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8497) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8557) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8557) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8557) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8567) MODBUS: uxTaskGetStackHighWaterMark: 1848[0m
+[1;31mE (8627) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8627) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8627) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8637) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (8697) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8697) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8697) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8707) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (8767) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8767) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8767) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8777) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (8837) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8837) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8837) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8847) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (8907) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8907) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8907) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8917) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (8977) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (8977) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (8977) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (8987) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9047) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9047) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9047) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9057) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9117) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9117) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9117) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9127) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9187) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9187) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9187) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9197) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9257) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9257) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9257) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9267) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9327) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9327) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9327) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9337) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9397) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9397) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9397) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9407) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9467) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9467) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9467) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9477) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9537) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9537) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9537) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9547) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9607) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9607) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9607) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9617) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9677) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9677) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9677) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9687) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9747) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9747) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9747) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9757) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9817) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9817) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9817) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9827) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9887) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9887) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9887) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9897) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (9957) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (9957) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (9957) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (9967) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10027) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10027) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10027) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10037) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10097) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10097) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10097) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10107) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10167) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10167) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10167) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10177) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10237) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10237) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10237) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10247) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10307) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10307) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10307) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10317) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10377) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10377) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10377) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10387) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10447) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10447) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10447) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10457) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10517) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10517) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10517) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10527) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10587) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10587) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10587) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10597) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10657) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10657) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10657) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10667) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10727) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10727) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10727) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10737) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10797) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10797) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10797) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10807) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10867) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10867) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10867) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10877) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (10937) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (10937) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (10937) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (10947) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11007) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11007) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11007) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11017) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11077) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11077) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11077) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11087) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11147) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11147) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11147) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11157) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11217) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11217) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11217) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11227) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11287) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11287) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11287) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11297) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11357) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11357) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11357) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11367) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11427) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11427) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11427) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11437) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11497) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11497) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11497) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11507) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11567) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11567) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11567) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11577) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11637) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11637) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11637) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11647) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11707) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11707) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11707) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11717) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11777) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11777) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11777) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11787) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11847) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11847) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11847) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11857) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11917) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11917) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11917) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11927) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (11987) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (11987) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (11987) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (11997) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12057) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12057) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12057) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12067) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12127) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12127) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12127) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12137) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12197) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12197) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12197) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12207) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12267) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12267) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12267) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12277) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12337) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12337) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12337) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12347) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12407) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12407) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12407) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12417) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12477) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12477) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12477) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12487) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12547) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12547) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12547) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12557) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12617) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12617) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12617) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12627) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12687) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12687) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12687) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12697) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12757) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12757) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12757) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12767) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12827) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12827) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12827) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12837) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12897) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12897) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12897) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12907) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (12967) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (12967) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (12967) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (12977) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13037) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13037) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13037) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13047) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13107) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13107) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13107) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13117) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13177) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13177) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13177) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13187) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13247) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13247) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13247) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13257) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13317) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13317) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13317) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13327) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13387) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13387) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13387) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13397) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13457) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13457) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13457) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13467) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13527) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13527) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13527) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13537) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13597) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13597) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13597) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13607) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13667) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13667) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13667) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13677) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13737) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13737) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13737) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13747) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13807) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13807) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13807) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13817) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13877) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13877) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13877) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13887) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (13947) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (13947) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (13947) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (13957) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14017) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14017) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14017) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14027) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14087) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14087) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14087) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14097) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14157) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14157) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14157) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14167) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14227) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14227) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14227) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14237) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14297) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14297) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14297) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14307) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14367) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14367) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14367) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14377) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14437) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14437) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14437) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14447) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14507) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14507) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14507) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14517) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14577) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14577) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14577) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14587) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14647) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14647) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14647) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14657) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14717) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14717) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14717) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14727) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14787) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14787) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14787) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14797) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14857) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14857) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14857) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14867) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14927) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14927) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14927) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (14937) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (14997) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (14997) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (14997) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15007) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15067) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15067) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15067) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15077) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15137) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15137) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15137) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15147) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15207) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15207) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15207) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15217) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15277) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15277) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15277) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15287) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15347) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15347) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15347) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15357) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15417) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15417) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15417) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15427) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15487) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15487) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15487) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15497) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15557) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15557) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15557) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15567) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15627) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15627) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15627) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15637) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15697) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15697) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15697) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15707) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15767) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15767) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15767) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15777) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15837) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15837) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15837) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15847) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15907) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15907) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15907) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15917) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (15977) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (15977) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (15977) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (15987) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16047) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16047) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16047) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16057) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16117) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16117) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16117) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16127) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16187) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16187) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16187) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16197) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16257) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16257) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16257) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16267) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16327) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16327) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16327) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16337) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16397) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16397) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16397) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16407) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16467) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16467) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16467) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16477) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16537) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16537) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16537) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16547) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16607) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16607) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16607) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16617) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16677) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16677) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16677) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16687) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16747) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16747) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16747) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16757) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16817) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16817) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16817) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16827) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16887) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16887) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16887) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16897) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (16957) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (16957) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (16957) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (16967) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17027) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17027) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17027) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17037) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17097) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17097) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17097) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17107) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17167) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17167) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17167) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17177) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17237) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17237) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17237) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17247) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17307) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17307) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17307) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17317) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17377) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17377) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17377) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17387) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17447) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17447) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17447) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17457) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17517) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17517) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17517) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17527) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17587) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17587) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17587) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17597) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17657) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17657) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17657) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17667) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17727) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17727) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17727) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17737) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17797) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17797) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17797) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17807) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17867) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17867) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17867) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17877) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (17937) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (17937) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (17937) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (17947) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18007) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18007) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18007) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18017) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18077) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18077) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18077) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18087) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18147) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18147) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18147) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18157) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18217) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18217) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18217) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18227) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18287) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18287) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18287) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18297) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18357) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18357) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18357) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18367) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18427) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18427) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18427) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18437) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18497) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18497) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18497) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18507) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18567) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18567) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18567) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18577) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18637) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18637) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18637) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18647) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18707) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18707) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18707) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18717) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18777) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18777) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18777) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18787) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18847) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18847) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18847) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18857) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18917) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18917) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18917) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18927) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (18987) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (18987) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (18987) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (18997) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19057) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19057) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19057) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19067) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19127) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19127) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19127) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19137) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19197) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19197) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19197) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19207) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19267) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19267) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19267) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19277) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19337) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19337) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19337) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19347) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19407) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19407) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19407) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19417) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19477) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19477) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19477) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19487) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19547) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19547) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19547) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19557) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19617) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19617) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19617) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19627) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19687) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19687) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19687) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19697) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19757) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19757) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19757) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19767) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19827) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19827) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19827) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19837) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19897) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19897) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19897) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19907) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (19967) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (19967) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (19967) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (19977) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20037) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20037) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20037) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20047) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20107) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20107) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20107) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20117) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20177) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20177) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20177) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20187) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20247) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20247) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20247) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20257) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20317) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20317) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20317) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20327) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20387) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20387) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20387) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20397) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20457) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20457) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20457) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20467) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20527) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20527) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20527) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20537) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20597) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20597) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20597) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20607) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20667) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20667) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20667) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20677) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20737) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20737) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20737) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20747) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20807) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20807) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20807) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20817) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20877) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20877) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20877) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20887) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (20947) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (20947) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (20947) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (20957) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21017) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21017) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21017) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21027) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21087) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21087) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21087) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21097) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21157) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21157) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21157) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21167) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21227) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21227) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21227) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21237) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21297) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21297) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21297) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21307) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21367) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21367) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21367) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21377) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21437) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21437) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21437) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21447) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21507) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21507) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21507) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21517) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21577) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21577) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21577) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21587) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21647) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21647) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21647) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21657) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21717) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21717) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21717) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21727) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21787) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21787) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21787) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21797) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21857) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21857) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21857) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21867) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21927) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21927) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21927) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (21937) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (21997) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (21997) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (21997) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22007) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22067) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22067) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22067) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22077) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22137) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22137) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22137) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22147) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22207) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22207) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22207) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22217) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22277) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22277) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22277) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22287) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22347) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22347) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22347) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22357) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22417) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22417) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22417) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22427) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22487) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22487) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22487) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22497) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22557) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22557) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22557) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22567) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22627) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22627) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22627) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22637) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22697) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22697) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22697) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22707) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22767) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22767) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22767) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22777) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22837) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22837) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22837) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22847) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22907) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22907) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22907) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22917) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (22977) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (22977) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (22977) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (22987) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23047) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23047) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23047) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23067) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23117) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23117) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23117) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23127) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23187) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23187) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23187) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23197) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23257) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23257) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23257) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23267) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23327) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23327) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23327) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23337) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23397) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23397) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23397) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23407) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23467) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23467) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23467) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23477) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23537) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23537) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23537) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23547) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23607) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23607) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23607) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23617) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23677) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23677) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23677) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23687) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23747) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23747) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23747) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23757) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23817) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23817) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23817) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23827) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23887) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23887) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23887) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23897) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (23957) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (23957) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (23957) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (23967) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24027) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24027) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24027) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24037) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24097) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24097) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24097) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24107) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24167) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24167) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24167) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24187) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24237) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24237) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24237) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24247) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24307) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24307) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24307) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24317) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24377) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24377) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24377) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24387) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m
+[1;31mE (24447) mbc_serial.master: mbc_serial_master_set_request(312): mb incorrect cid parameter.[0m
+[1;31mE (24447) mbc_serial.master: mbc_serial_master_get_parameter: 0x3ffc7e84 The cid(0) not found in the data dictionary.[0m
+[1;31mE (24447) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x102) (ESP_ERR_INVALID_ARG).[0m
+[0;32mI (24457) MODBUS: uxTaskGetStackHighWaterMark: 1800[0m

@@ -22,7 +22,8 @@
 // -------------- DEFINES -----------------
 #define MODBUS_BAUD_RTT (115200)
 // Modbus slave device adr
-#define MODBUS_SLAVE_1 (0) // TODO
+#define MODBUS_SLAVE_1 (1)
+#define OPTS(min_val, max_val, step_val) { .opt1 = min_val, .opt2 = max_val, .opt3 = step_val }
 
 // ------------- ESPIDF LOG TAG -------------
 static const char *TAG = "MODBUS";
@@ -34,7 +35,7 @@ uint8_t type = 0;
 
 typedef enum {
     CID_TEST_COMUN = 0,
-    CID_VOLTAGE,
+    CID_VOLTAGE = 1,
 } modbus_cid;
 
 // Modbus 'Register Start' addresses
@@ -92,8 +93,8 @@ void modbus_conf_init() {
 
     ESP_ERROR_CHECK(mbc_master_create_serial(&modbus_config, &master_handler));
 
-    // Set UART pins(TX: IO12, RX: IO13, RTS: IO18, CTS: IO19, DTR: UNUSED, DSR: UNUSED)
-    ESP_ERROR_CHECK(uart_set_pin(modbus_uart_port_numbr, 12, 13, 18, 19, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
+    // Set UART pins(TX: IO17, RX: IO16, RTS: IO(UNUSED)18, CTS: IO(UNUSED)19, DTR: UNUSED, DSR: UNUSED)
+    ESP_ERROR_CHECK(uart_set_pin(modbus_uart_port_numbr, 17, 16, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE));
 
     // Modbus register(table) config
     conf_mapping();
@@ -104,18 +105,20 @@ void modbus_conf_init() {
 }
 
 static void conf_mapping() {
-    mb_parameter_descriptor_t device_parameters[] = {0};
-    // param_offset - optional, set to 0
-    // param_opts - optional
-    // TODO warning section can be mistakes
-    // Test parametr
-    /*device_parameters[0] = {
-        CID_TEST_COMUN, STR("Test"), STR("--"), MODBUS_SLAVE_1, MB_PARAM_DISCRETE,
-        modbus_test_register, 1, 0, PARAM_TYPE_U8, PARAM_SIZE_U8, 0, PAR_PERMS_READ
-    };*/
-
-    // device_parameters[1];
-
+    static mb_parameter_descriptor_t device_parameters[] = {
+        {.cid = 0, // Має бути строго 0 для першого  елмента КУРВА ТИХ РОЗРОБНИКІВ ESPIDF!
+            .param_key = STR("VoltageUsage"),
+            .param_units = STR("V"),
+            .mb_slave_addr = MODBUS_SLAVE_1,
+            .mb_param_type = MB_PARAM_INPUT,
+        .mb_reg_start = modbus_voltage_register,
+            .mb_size = 1,
+            .param_offset = 0,
+            .param_type = PARAM_TYPE_U16,
+            .param_size = 2,
+            .param_opts = OPTS(0, 0, 0),
+            .access = PAR_PERMS_READ}
+    };
     // Визначаємо к-сть параметрів
     uint16_t num_device_parameters = (sizeof(device_parameters) / sizeof(device_parameters[0]));
     ESP_ERROR_CHECK(mbc_master_set_descriptor(master_handler, &device_parameters[0], num_device_parameters));
@@ -141,11 +144,11 @@ void vTask_Modbus_Start_Communication(void* arg) {
 
     for (;;) {
         /*
-         * Wait 50 ms (time interval between reading) and check the command
+         * Wait 2000 ms (time interval between reading) and check the command
          * if command arrive earlier just perform the command
-         * if no command wait 50 ms and do generic cation
+         * if no command wait 2000 ms and do generic cation
          */
-        BaseType_t status = xQueueReceive(modbus_communication_command, &modbus_action , pdMS_TO_TICKS(50));
+        BaseType_t status = xQueueReceive(modbus_communication_command, &modbus_action , pdMS_TO_TICKS(2000));
         if (status == pdTRUE) {
             switch (modbus_action.action) {
                 case modbus_action_write:
@@ -173,7 +176,7 @@ void vTask_Modbus_Start_Communication(void* arg) {
                     break;
             }
         } else {
-            modbus_communication_error = mbc_master_get_parameter(master_handler, CID_VOLTAGE, (uint8_t*)&received_value, &type);
+            modbus_communication_error = mbc_master_get_parameter(master_handler, 0, (uint8_t*)&received_value, &type);
             if (modbus_communication_error == ESP_OK) {
                 data_struct.data = received_value;
                 data_struct.id = 1; // TODO

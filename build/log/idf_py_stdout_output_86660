@@ -1,0 +1,166 @@
+Command: /home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python /home/user/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build/EnergyMeasurment.elf /mnt/Data/InfoTech/ESP-IDFProjects/EnergyMeasurment/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf6.0_py3.14_env/bin/python' '/home/user/esp/esp-idf/tools/idf.py' '-B'
+use_init: Chip rev:         v3.1
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic a�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Oct 12 2026 22:29:39[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=239d0h (145872) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=000339f8 vaddr=3ffb0000 size=045d4h ( 17876) load[0m
+[0;32mI (145) esp_image: segment 2: paddr=00037fd4 vaddr=40080000 size=08044h ( 32836) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=aca8ch (707212) map[0m
+[0;32mI (411) esp_image: segment 4: paddr=000ecab4 vaddr=40088044 size=0e6e8h ( 59112) load[0m
+[0;32mI (436) esp_image: segment 5: paddr=000fb1a4 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (447) boot: Disabling RNG early entropy source...[0m
+[0;32mI (458) cpu_start: Multicore app[0m
+[0;32mI (466) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (466) cpu_start: Pro cpu start user code[0m
+[0;32mI (466) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     EnergyMeasurment[0m
+[0;32mI (477) app_init: App version:      89[0m
+[0;32mI (480) app_init: Compile time:     Oct 15 2026 12:37:24[0m
+[0;32mI (485) app_init: ELF file SHA256:  1af1a4764...[0m
+[0;32mI (490) app_init: ESP-IDF:          v6.0.2[0m
+[0;32mI (493) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (497) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB9508 len 00026AF8 (154 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 4009672C len 000098D4 (38 KiB): IRAM[0m
+[0;32mI (539) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;32mI (547) main_task: Started on CPU0[0m
+[0;32mI (547) main_task: Calling app_main()[0m
+[0;32mI (577) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (587) wifi:wifi driver task: 3ffc0e6c, prio:23, stack:6656, core=0[0m
+[0;32mI (597) wifi:wifi firmware version: 00ad238[0m
+[0;32mI (597) wifi:wifi certification version: v7.0[0m
+[0;32mI (597) wifi:config NVS flash: enabled[0m
+[0;32mI (597) wifi:config nano formatting: disabled[0m
+[0;32mI (597) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (607) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (607) wifi:Init management short buffer num: 32[0m
+[0;32mI (617) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (617) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (627) wifi:Init static rx buffer num: 10[0m
+[0;32mI (627) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (627) wifi_init: rx ba win: 6[0m
+[0;32mI (637) wifi_init: accept mbox: 6[0m
+[0;32mI (637) wifi_init: tcpip mbox: 32[0m
+[0;32mI (637) wifi_init: udp mbox: 6[0m
+[0;32mI (637) wifi_init: tcp mbox: 6[0m
+[0;32mI (647) wifi_init: tcp tx win: 5760[0m
+[0;32mI (647) wifi_init: tcp rx win: 5760[0m
+[0;32mI (647) wifi_init: tcp mss: 1440[0m
+[0;32mI (657) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (657) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (667) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (667) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (757) wifi:mode : sta (68:25:dd:32:01:b4)[0m
+[0;32mI (767) wifi:enable tsf[0m
+[0;32mI (767) wifi station: wifi_init_sta finished.[0m
+[0;32mI (777) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (787) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (787) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (797) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (817) wifi:<ba-add>idx:0 (ifx:0, 9c:53:22:7f:19:13), tid:5, ssn:0, winSize:64[0m
+[0;32mI (917) wifi:connected with LinkaStar1913, aid = 7, channel 6, BW20, bssid = 9c:53:22:7f:19:13[0m
+[0;32mI (917) wifi:security: WPA2-PSK, phy: bgn, rssi: -50, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (927) wifi:pm start, type: 1[0m
+
+[0;32mI (927) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (957) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1967) esp_netif_handlers: sta ip: 192.168.0.161, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (1967) wifi station: got ip:[0m
+[0;32mI (1967) wifi station: connected to ap SSID:LinkaStar1913 password:irestartit2[0m
+[0;32mI (1977) uart: queue free spaces: 20[0m
+[0;32mI (1977) mb_port.serial: mbm_rtu@0x3ffc7ec4, suspend port from task.[0m
+[0;32mI (1977) MODBUS: Modbus Config success[0m
+[0;32mI (1987) MSG_BUFFER: xMessageBufferCreate succeeded[0m
+[0;32mI (1987) main_task: Returned from app_main()[0m
+[1;31mE (3037) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (3037) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (4087) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (4087) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (5137) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (5137) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (6187) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (6187) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (7237) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (7237) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (8287) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (8287) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (9337) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (9337) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (10387) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (10387) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (11437) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (11437) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (12487) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (12487) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (13537) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (13537) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (14587) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (14587) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (15637) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (15637) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (16687) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (16687) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (17737) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (17737) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (18787) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (18787) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (19837) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (19837) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (20887) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (20887) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (21937) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (21937) MODBUS: uxTaskGetStackHighWaterMark: 2040[0m
+[1;31mE (22987) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (22987) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (24037) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (24037) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (25087) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (25087) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (26137) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (26137) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (27187) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (27187) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (28237) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (28237) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (29287) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (29287) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (30337) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (30337) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (31387) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (31387) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (32437) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (32437) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (33487) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (33487) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
+[1;31mE (34537) MB_CONTROLLER_MASTER: mbc_master_get_parameter(133): Master get parameter failure, error=(0x107) (ESP_ERR_TIMEOUT).[0m
+[0;32mI (34537) MODBUS: uxTaskGetStackHighWaterMark: 2008[0m
